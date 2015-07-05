@@ -13,6 +13,6 @@ gulp.task('browserSync', function() {
       baseDir: config.server.baseDir,
       middleware: [proxy(proxyOptions)]
     },
-    https:false
+    https:true
   });
 });

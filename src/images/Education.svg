@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="154px" height="154px" viewBox="0 0 154 154" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>Oval 32 Copy + Graduater</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="SteamFab" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Sectors" sketch:type="MSArtboardGroup" transform="translate(-474.000000, -770.000000)">
+            <g sketch:type="MSLayerGroup" transform="translate(0.000000, 540.000000)" id="Oval-32-Copy-+-Reduce-the-cost-of-e-+-Graduater">
+                <g transform="translate(476.000000, 232.000000)" sketch:type="MSShapeGroup">
+                    <g id="Oval-32-Copy-+-Graduater">
+                        <circle id="Oval-32-Copy" stroke="#FFFFFF" stroke-width="3" fill="#57A8D9" cx="75" cy="75" r="75"></circle>
+                        <g id="Graduater" transform="translate(28.000000, 40.000000)" fill="#000000">
+                            <path d="M95,24.1666667 L47.5,0 L0,24.1666667 L23.3333333,38 L23.3333333,61.5 C23.3333333,66.3333333 26.5,70 30.8333333,70 L64,70 C68.3333333,70 71.5,66.5 71.5,61.5 L71.5,38 L81.5,32 L81.5,48 L84.8333333,48 L84.8333333,30.1666667 L95,24.1666667 L95,24.1666667 Z M47.5,3.83333333 L88,24.5 L47.5,48.6666667 L7,24.5 L47.5,3.83333333 L47.5,3.83333333 Z M68.3333333,61.5 C68.3333333,64 67,66.5 64.1666667,66.5 L31,66.5 C28,66.5 26.8333333,64 26.8333333,61.5 L26.8333333,40 L47.6666667,52.3333333 L68.5,40 L68.5,61.5 L68.3333333,61.5 Z" id="Shape"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
