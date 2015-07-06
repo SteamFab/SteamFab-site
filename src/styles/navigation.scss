@@ -59,11 +59,12 @@
   }
 
   li > a {
+// for small screen
     padding: 20px 40px;
     letter-spacing: 0.5px;
 
     &:hover {
-      color: #595d61;
+      color: #a0a0a0;
     }
   }
 
