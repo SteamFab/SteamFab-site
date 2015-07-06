@@ -16,6 +16,7 @@
     "gulp-uglify": "^1.0.2",
     "gulp-util": "^3.0.0",
     "pretty-hrtime": "^0.2.2",
+    "proxy-middleware": "^0.13.0",
     "require-dir": "^0.1.0",
     "url": "^0.10.3",
     "vinyl-source-stream": "~0.1.1"
