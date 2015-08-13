@@ -1,22 +1,33 @@
-@import url(//fonts.googleapis.com/css?family=Exo:100,200,300,400,500,600);
+@import url(//fonts.googleapis.com/css?family=Exo+2:300,400,600);
 
 $font-size-base: 16px;
-$font-family-sans-serif: 'Exo', sans-serif !default;
+$font-family-sans-serif: 'Exo 2', sans-serif !default;
+$line-height: 1.35;
+$line-height-large: 1.8;
 
 //** Padding between columns. Gets divided in half for the left and right.
 $grid-gutter-width:         2px !default;
 $border-width:              4px !default;
  
 $border-radius-base: 5px;
-$brand-primary: #1B537E;
-$brand-seconday: #1B537E;
+
+// Color scheme
+$brand-primary: #193441; // #1B537E;
+$brand-secondary: #3E606F; //#1B537E;
+$color1: #91AA9D; // #5A3A6D;
+$color2: #193441; //#930924;
+$color3: #90959B;
+$color4: #FF712C; //#343C40;
+$color5: #D1DBBD;  // #11AA94;
+$color6: #CFC291; //#695D46; //#CC7D2A;
+
 $black: #2C2E33;
 $black2: #4A4E53;
 $text-color: $black;
 
 $navbar-inverse-border: transparent;
 $navbar-height: 66px;
-$navbar-inverse-bg: $brand-seconday;
+$navbar-inverse-bg: $brand-secondary;
 $navbar-inverse-color: #fff;
 $navbar-inverse-toggle-hover-bg: none;
 $navbar-inverse-toggle-icon-bar-bg: $black;
@@ -24,9 +35,11 @@ $navbar-inverse-link-color: #fff;
 $navbar-inverse-link-active-bg: none;
 
 @import "bootstrap";
+//@import "animate";
 @import "ladda-themeless.min";
 @import "navigation";
 @import "footer";
+@import "portfolio";
 
 body {
   background: #d8d8d8;
@@ -41,42 +54,68 @@ body {
 
 //padding to offset from header
 .meat {
-  padding: 66px 0 0;
+//  padding: 66px 0 0;
 }
 
 //Front page
 
 //Hero
-.firstPage-hero-bg {
-  background: linear-gradient( rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) ), url('../images/BostonRedDarkened2.jpg') no-repeat center center;
-//      background:  url('../images/BostonRedDarkened2.jpg') no-repeat center center;
-  position: fixed;
-  width: 1475px;
-  height: 684px;
-  z-index: -1;
-  margin-top: -10px;
+//.firstPage-hero-bg {
+//  background: linear-gradient( rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) ), url('../images/Hero-1.jpg');
+
+//  background-position: center center;
+//  background-repeat: no-repeat;
+//  background-attachment: fixed;
+//  background-size: cover;
+//    position:fixed;
     
-  @media (max-width: $screen-sm) {
-     background: linear-gradient( rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) ), url('../images/BostonRedCropped2.jpg') no-repeat center center; 
-      width: 768px;
-      margin-top: -85px;
-  }
-}
+//  width: 1475px;
+//  height: 684px;
+//    width: 100%;
+//    height: 100%;
+//    min-height: 100%;
+//    background-size: cover;
+//  z-index: -1;
+//  margin-top: -10px;
+    
+//  @media (max-width: $screen-sm) {
+//     background: linear-gradient( rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) ), url('../images/BostonRedCropped2.jpg') no-repeat center center; 
+//      width: 768px;
+//      margin-top: -85px;
+//  }
+//}
 
 .jumbotron {
-    margin-top: -21px;
-    height: 619px;
+//    margin-top: -21px;
+//    height: 619px;
+      height: 100vh;
+//    height: 100%;
+//    min-height: 100%;
+//    background: transparent;
+      background-image: linear-gradient( rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) );
+//    , url('../images/Hero-3.jpg');
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: $color5;
+      background-blend-mode: multiply;
     
-    @media (max-width: $screen-sm) {
-      height: 425px;
-    }
+//      @media (max-width: $screen-sm) {
+//        background: linear-gradient( rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) );
+//            ,url('../images/Hero-2@0.5x.jpg');
+//        background-position: center center;
+//        background-repeat: no-repeat;
+//        background-size: cover;
+//        background-color: $color5;
+//        background-blend-mode: multiply;
+//      }
 }
 
 .firstPage-hero {
   margin-bottom: 0px;
   padding: 0px;
   color: white;
-  background: transparent;
+//  background: transparent;
     
   .space {
       padding-top: 125px;
@@ -85,7 +124,7 @@ body {
     font-size: 55px;
     font-weight: 300;
     max-width: 775px;
-    line-height: 1.35;
+    line-height: $line-height;
 //    padding-top: 125px;
     padding-left: 40px;
       background: linear-gradient( to bottom right, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.25) )
@@ -95,24 +134,24 @@ body {
 //    color: #ccc;
     font-weight: 300;
       max-width: 775px;
-    line-height: 35px;
+    line-height: $line-height;     // 35px;
     padding-left: 40px;
       background: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) )
   }
   @media screen and (max-width: $screen-sm) {
     .space {
-       padding-top: 50px;
+       padding-top: 150px;   
   }
     h1 {
         font-size:36px;
-        line-height: 50px;
+        line-height: $line-height;   // 50px;
 //        padding-top: 50px;
         padding-right: 50px;
     }
     h2 {
         font-size: 20px;
         font-weight: 300;
-        line-height: 35px;
+        line-height: $line-height;   // 35px;
         padding-right: 50px;
     }
   }
@@ -138,19 +177,32 @@ body {
     border-color: #eea236;
     color: #063FA7;
     font-weight: 600;
+    margin-left: 40px;
 }
 
 
 .border-right {
-    padding-right: $border-width;
+//    padding-right: $border-width;
+    border-right: solid;
+    border-color: #fff;
+    border-width: $border-width;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .border-right-zero {
     padding-right: 0;
+    padding-left: 0;
 }
 
 .border-left {
     padding-left: 0;
+}
+
+.border-bottom {
+    border-bottom: solid;
+    border-color: #fff;
+    border-width: $border-width;
 }
 
 .box {
@@ -171,7 +223,7 @@ body {
   .img-left {
       img {
         float: left;
-        padding-left: 30px;
+//        padding-left: 30px;
         padding-right: 60px;
         padding-bottom: 60px;
         margin: auto;
@@ -181,23 +233,23 @@ body {
    h2 {
         font-size: 38px;
         font-weight: 400;
-        line-height: 1.35;
+        line-height: $line-height;
         letter-spacing: 0.2px;
    }
     
     h3 {
         font-size: 26px;
         font-weight: 300;
-        line-height: 1.35;
+        line-height: $line-height;
         letter-spacing: 0.2px;
     }
     
    p {
       font-size: 18px;
-      font-weight: 200;
+      font-weight: 300;   // 200
       text-align: left;
       letter-spacing: 0.2px;
-      line-height: 1.5;
+      line-height: $line-height;   // 1.5;
       padding-right: 35px;
         
       @media (max-width: $screen-md-min) {
@@ -218,11 +270,11 @@ body {
     }
     
     .text-right-small {
-      font-size: 16px;
+//      font-size: 16px;
       text-align: right;
       padding-top: 30px;
       padding-right: 50px;
-        padding-bottom: 40px;
+      padding-bottom: 40px;
         
       @media (max-width: $screen-md-min) {
          padding-right: 15px; 
@@ -236,39 +288,39 @@ body {
         padding-top: 50px;
     }
     .padding2550 {
-            padding-top: 25px;
+        padding-top: 25px;
     }
 }
 
 .box-blue {
-    background: $brand-primary;
+    background: $brand-secondary;
     color: #fff;
 }
 
 .bg-blue {
-    background: $brand-primary;
+    background: $brand-secondary;
 }
 
 .box-violet {
-    background: #5A3A6D;
+    background: $color1;
     color: #fff;
 }
 
 .bg-violet {
-    background: #5A3A6D;
+    background: $color1;
 }
 
 .box-red {
-    background: #930924;
+    background: $color2;
     color: #fff;
 }
 
 .bg-red {
-    background: #930924;
+    background: $color2;
 }
     
 .box-grey {
-    background: #90959B;
+    background: $color3;
     color: #fff;
     
     h2 {
@@ -277,7 +329,7 @@ body {
 }
 
 .bg-grey {
-    background: #90959B;
+    background: $color3;
 }
 
 .box-lightgrey {
@@ -324,10 +376,14 @@ body {
 
 .bg-greenyellow {
     background: #C9D032;
+    
+    p {
+        margin-bottom: 30px;
+    }
 }
 
 .box-darkgrey {
-    background: #343C40;
+    background: $color4;;
     color: #fff;
     
     h2 {
@@ -336,21 +392,21 @@ body {
 }
 
 .bg-darkgrey {
-    background: #343C40;
+    background: $color4;
 }
 
 .box-orange {
-    background: #CC7D2A;
+    background: $color6;
     color: #fff;
 }
 
 .bg-orange {
-    background: #CC7D2A;
+    background: $color6;
 }
 
 .box-green {
-    background: #11AA94;
-    color: #fff;
+    background: $color5;
+    color: $black2;
 //    margin-bottom: 6px;
     
     h2 {
@@ -359,7 +415,7 @@ body {
 }
 
 .bg-green {
-    background: #90959B;
+    background: $color5;
 }
 
 .box-image::before {
@@ -371,8 +427,10 @@ body {
     width: 100%;
     height: 100%;
     display: block;
-    background-image: url(../images/Office.jpg);   
-    background-color: #097BB8;
+    background-image: url(../images/OfficeBlur.jpg);  
+    background-size: cover;
+//    -webkit-filter: blur(2px);
+    background-color: $color5; // #097BB8;
     background-blend-mode: multiply;
 //    -webkit-filter: blur(6px);
 //    filter: blur(6px);
@@ -384,8 +442,8 @@ body {
     
     p {
         font-size: 24px;
-        font-weight: 200;
-        line-height: 1.8;
+        font-weight: 300;    // 200
+        line-height: $line-height-large;    // 1.8;
     }
 }
 
@@ -425,6 +483,80 @@ body {
     }
 }
 
+.box-hubspot {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40) ), url(../images/inbound.jpeg);
+    background-size: cover;
+    color: #fff;
+    
+    a {
+        color: #fff;
+    }
+    
+    h2 {
+//        color: #4F7CB3;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    
+    h3 {
+        text-transform: uppercase;
+    }
+    
+    p {
+        margin-bottom: 30px;
+    }
+    
+    ul {
+        list-style-type: none;
+        
+        @media (min-width: $screen-md-min) {
+          columns: 2;
+          -webkit-columns: 2;
+          -moz-columns: 2;
+        }
+    }
+}
+
+.box-visualdesign {
+        background-image: linear-gradient( rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40) ), url(../images/Designs2.jpg);
+    background-size: cover;
+    color: #fff;
+    
+        p {
+        margin-bottom: 30px;
+    }
+}
+
+.box-ycombinator {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40) ), url(../images/YC.jpeg);
+    background-size: cover;
+    color: #fff;
+    
+    a {
+        color: #fff;
+    }
+}
+
+.box-techstars {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40) ), url(../images/techstars.jpg);
+    background-size: cover;
+    color: #fff;
+    
+        p {
+        margin-bottom: 30px;
+    }
+}
+
+.box-forentrepreneurs {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40) ), url(../images/forentrepreneurs.jpg);
+    background-size: cover;
+    color: #fff;
+    
+        p {
+        margin-bottom: 30px;
+    }
+}
+    
 .box-darkgreybig {
     background: #35393B;
     color: #fff;
@@ -439,7 +571,7 @@ body {
     
     p {
         font-size: 28px;
-        font-weight: 200;
+        font-weight: 300;  // 200
     }
 }
 
@@ -477,17 +609,69 @@ body {
         height: 100%;
 //        opacity: 0.6;
       }
+      @media (max-width: $screen-sm-min) {
+        position: absolute;
+        background-image: url(../images/strike-through.png);
+        background-repeat: no-repeat;
+        background-size: 200px 50px;
+        top: 0;
+        left: 200px;
+        width: 100%;
+        height: 100%;
+//        opacity: 0.6; 
+      }
     }
 }
 
 
 .sector-image {
-    position: relative;
-    height: 600px;
-    padding-top: 50px;
-    padding-right: 50px;
-    margin: auto;
-    text-align: center;
+    background-image: url(../images/Sectors.svg);
+    background-repeat: no-repeat; 
+//    background-position: left top;
+    background-position: center;
+//    background-size: cover;
+
+//    position: relative;
+//    border: 10px solid #b6bdc3;
+    width: 100%;
+    height: 500px;
+//    padding-top: 50px;
+//    padding-right: 50px;
+    margin: 0 auto;
+//    text-align: center;
+    
+    @media (max-width: $screen-md) {
+        background-image: url(../images/SectorsSmall.png);
+    background-repeat: no-repeat; 
+        background-size:contain;
+        height: 600px;
+//        background-position: left;
+    }
+}
+
+.program-image {
+    background-image: url(../images/Program.svg);
+    background-repeat: no-repeat;
+//    background-position: left top;
+    background-position: center;
+//    background-size: cover;
+
+//    position: relative;
+//    border: 10px solid #b6bdc3;
+    width: 100%;
+    height: 900px;
+//    padding-top: 50px;
+//    padding-right: 50px;
+    margin: 0 auto;
+//    text-align: center;
+    
+    @media (max-width: $screen-md) {
+        background-image: url(../images/ProgramSmall.png);
+    background-repeat: no-repeat; 
+        background-size:contain;
+        height: 1000px;
+//        background-position: left;
+    }
 }
 
 .centered {
@@ -509,7 +693,7 @@ body {
 }
 
 .vertical-seperator {
-  border-right: 1px solid #73787D;
+  border-right: 1px solid #65CDF1; //#73787D;
   height: 43px;
   margin: auto;
   width: 1px;
@@ -519,7 +703,7 @@ body {
 
   .intro {
     color: #fff;
-    padding: 85px 0 100px;
+    padding: 125px 75px 100px;
     background: #3C4046;
 //    margin-bottom: 20px;
       
@@ -527,7 +711,7 @@ body {
       margin-top: 10px;
       font-size: 55px;
       font-weight: 300;
-      line-height: 1.35;
+      line-height: $line-height;
       padding-left: 40px;
       padding-bottom: 30px;
     }
@@ -587,7 +771,7 @@ body {
   p {
     font-size: 13px;
     font-family: 'Glegoo', serif;
-    line-height: 1.75;
+    line-height: $line-height-large;   // 1.75;
   }
 
   a {
@@ -607,7 +791,7 @@ body {
 
     p {
       font-size: 16px;
-      line-height: 1.5;
+      line-height: $line-height;   // 1.5;
     }
 
     .meta {
@@ -659,7 +843,7 @@ label {
   max-height: 1000px;
   
   .contact-wrap {
-    padding: 0 0 40px;
+    padding: 0 50px 40px;
   }
 
 
@@ -702,7 +886,7 @@ label {
   @media (min-width: $screen-sm-min) {
 
     .contact-wrap {
-      padding: 0 0 77px;
+//      padding: 0 0 77px;
     }
 
     .close-contact {

@@ -1,0 +1,43 @@
+<div class="section-subscribe">
+    <div class="container-fluid">
+      <div class="row">
+          <div class="box">
+        <div class="hidden-xs col-sm-12">
+          <p class="">Register to receive updates from SteamFab:</p>
+        </div>
+        <form class="col-xs-12 col-sm-6" action="https://sipfoundry.createsend.com/t/t/s/uliity/" method="post">
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 subscribe-input">
+              <input name="cm-uliity-uliity" type="email" required type="email" class="form-control" placeholder="E-Mail">
+            </div>
+            <div class="col-xs-12 col-sm-6 subscribe-input">
+              <button type="submit" class="btn btn-primary breath-xs">Keep me updated</button>
+            </div>
+          </div>
+        </form>
+        <div class="col-xs-12 visible-xs-block">
+          <p class="lead">Register to receive <br> updates from SteamFab.</p>
+          <hr>
+        </div>
+
+        <div class="col-sm-1 hidden-xs seperater-wrap">
+         <div class="vertical-seperator"></div>
+       </div>
+
+       <div class="col-xs-12 centered-xs col-sm-4 follow">
+        <div class="social-links">
+          <div class="row">
+            <div class="col-sm-2">
+              <a href="https://twitter.com/SteamFab" class="col-sm-4 block-link twitter" target="_blank"><span class="sr-only">Twitter</span></a>
+            </div>
+            <p class="lead col-sm-9">Follow us on Twitter: <br><a href="https://twitter.com/SteamFab" target="_blank">https://twitter.com/SteamFab</a></p>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+          
+        </div>
+          
+    </div>
+  </div>
+</div>

@@ -2,17 +2,17 @@ $(document).ready(function() {
   
   // Blog read more
   
-  $('.blog').on('click', '.read-more', function(e) {
-    event.preventDefault();
-    var context = $(this).closest('article'),
-    url = $(this).attr('href'),
-    title = $('h1', context).html();
+//  $('.blog').on('click', '.read-more', function(e) {
+//    event.preventDefault();
+//    var context = $(this).closest('article'),
+//    url = $(this).attr('href'),
+//    title = $('h1', context).html();
 
-    context.load(url + ' #post', function() {
-      context.find('a.twitter-share').attr('href',
-        'http://twitter.com/share?text=' + title + '&url=' + window.location.protocol + '//' + window.location.host + url);
-    });
-  });
+//    context.load(url + ' #post', function() {
+//      context.find('a.twitter-share').attr('href',
+//        'http://twitter.com/share?text=' + title + '&url=' + window.location.protocol + '//' + window.location.host + url);
+//    });
+//  });
 
   // Contact us
 
@@ -62,13 +62,27 @@ $(document).ready(function() {
 
 //});
 
+// Paralax effect for home page hero image
   var jumboHeight = $('.jumbotron').outerHeight();
   function parallax(){
     var scrolled = $(window).scrollTop();
-    $('.firstPage-hero-bg').css('height', (jumboHeight-scrolled) + 'px');
+//    $('.firstPage-hero-bg').css('height', (jumboHeight-scrolled) + 'px');
+    $('.jumbotron').css('height', 100-(scrolled/2) + 'vh');
   }
 
   $(window).scroll(function(e){
     parallax();
   });
+
+// Animation (face up) when item comes into Viewport
+//    $('.animated').viewportChecker();
+    
+var images = ['Hero-1', 'Hero-2', 'Hero-3', 'Hero-4', 'Hero-5', 'Hero-6'];
+var mq = window.matchMedia('all and (max-width: 768px)');
+
+if(mq.matches) {
+  $('.jumbotron').css({'background-image': 'url(../images/' + images[Math.floor(Math.random() * images.length)] + '@0.5x.jpg)'});
+    } else {
+   $('.jumbotron').css({'background-image': 'url(../images/' + images[Math.floor(Math.random() * images.length)] + '.jpg)'});
+    }
 });

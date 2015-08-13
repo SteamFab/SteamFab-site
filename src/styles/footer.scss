@@ -61,14 +61,14 @@ footer {
   .copyright {
     padding: 35px 15px 5px;
     font-size: 14px;  
-    line-height: 1.7;
+    line-height: $line-height-large;  // 1.7;
   }
 
   @media (min-width: $screen-sm-min) {
     padding: 80px 10px 60px;
 
     .logo-wrap {
-      padding: 5px 25px 30px;
+      padding: 5px 40px 30px;
     }
 
     .social-links {
@@ -105,6 +105,10 @@ footer {
   padding: 18px 0 18px;
   margin: 0;
 
+    a {
+        color: $color6;
+    }
+
   @media (min-width: $screen-sm-min) {
     text-align: left;
     font-size: 16px;
@@ -113,7 +117,7 @@ footer {
 
 hr {
   margin: 0 20px;
-  border-top: 1px solid #73787D;
+  border-top: 1px solid #65CDF1; //#73787D;
 }
 
 .meta {
@@ -157,7 +161,7 @@ hr {
   }
 
   .date {
-    border-left:1px solid #73787D;
+    border-left:1px solid #65CDF1; //#73787D;
     padding-left: 10px;
   }
 }
@@ -232,11 +236,13 @@ hr {
 
 
 .section-subscribe {
-  background: #3C4046;
+  background: $brand-secondary;
 //  color: #AAB2B9;
     color: #fff;
+//    padding: 30px 10px;
+    padding: 40px 40px 40px;
 
-  padding: 30px 0 15px;
+//  padding: 30px 0 15px;
 
   .subscribe-input input {
     text-transform: uppercase;
@@ -262,7 +268,14 @@ hr {
 }
 
 .section-subscribe-orange {
-    background: #CC7D0A;
+    background: $color6;
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-bottom: 20px;
+    
+      @media (max-width: $screen-md-min) {
+          padding-left: 25px;
+      }
 }
 
 .breath-xs {

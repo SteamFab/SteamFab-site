@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <title>Nimble REST Contact API test</title>
+
+
+    <style type="text/css">
+        body {
+            font-size: 100%;
+        }
+        input, button {
+            font-size: 120%;
+        }
+        table.list {border-collapse: collapse;}
+        table.list th {background-color: #9e9e9e;font-weight: bold; text-align: center }
+        table.list tr:nth-child(even) {background-color: #ddd}
+        table td, th {
+            padding: 5px;
+            border: 1px solid #CCC;
+        }
+    </style>
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        // Change this to your valid address!
+        var pingback_url = "http://localhost:8888/nimble.html?authorized";
+        // construct OAuth redirect URL
+        function getOAuthRedirUrl(api_key) {
+            return "https://api.nimble.com/oauth/authorize?client_id=" + encodeURIComponent(api_key) +
+                    "&redirect_uri=" + encodeURIComponent(pingback_url) + "&response_type=code";
+        }
+        // extract GET parameters from URL
+        function getURLParameter(name) {
+            var res = (RegExp(name + '=' + '(.+?)(&|$)').exec(window.location.search) || [,undefined])[1];
+            return (typeof(res) == "undefined") ? res : decodeURI(res);
+        }
+        // return field value or empty string if there's no such field
+        function getFieldValue(fields, name) {
+            return (name in fields)? fields[name][0].value : "";
+        }
+        //Display list of contacts
+        function displayContacts(resources) {
+            var html = "";
+            for (var i = 0; i < resources.length; i++) {
+                var contact = resources[i];
+                var first_name = getFieldValue(contact.fields, "first name");
+                var last_name  = getFieldValue(contact.fields, "last name");
+                console.log("C:" + i + " / "+first_name+" "+last_name);
+                html += "<tr><td>"+contact.id+"</td><td>"+ first_name +"</td><td>"+last_name+"</td></tr>";
+            }
+            $("#contacts").html("<table class=\"list\"><tr><th>ID</th><th>Firstname</th><th>Lastname</th></tr>"+html+"</table>");
+        }
+        
+        // this will download nimble contacts
+        function getContacts(access_token) {
+            var data = "&sort=" + encodeURIComponent("recently viewed:asc") +
+                    "&fields=" + encodeURIComponent("first name,last name") +
+                    "&access_token=" + encodeURIComponent(access_token);
+            $.ajax({
+                type:'GET',
+                url:"https://api.nimble.com/api/v1/contacts/list/?" + data,
+                async:false,
+                jsonpCallback:'jsonCallback',
+                contentType:"application/json",
+                dataType:'jsonp',
+                success:function (json) {
+                    console.log(json);
+                    if (json.code) {
+                        alert("An error occured: " + json.message);
+                    } else {
+                        displayContacts(json.resources);
+                    }
+                },
+                error:function (e) {
+                    console.log(e);
+                }
+            });
+        }
+        // Initialize stuff, once page is ready
+        $(document).ready(function() {
+            // do we have Auth code already?
+            var code = getURLParameter("code");
+            if (typeof(code) == "undefined") {
+                $("#auth_block").show();
+            } else {
+                $("#auth_block").hide();
+                console.log("Got auth code!! : " + code);
+                // proceed to next step
+                var data = "&client_id=" + encodeURIComponent($("#api_key").val()) +
+                        "&code=" + encodeURIComponent(code) +
+                        "&redirect_uri=" + encodeURIComponent(pingback_url) +
+                        "&client_secret=" + encodeURIComponent($("#secret_key").val()) + "&grant_type=authorization_code";
+                console.log("/jsonp.php?" + data);
+                $.ajax({
+                    type:'GET',
+                    url:"/jsonp.php?" + data,
+                    async:false,
+                    jsonpCallback:'jsonCallback',
+                    contentType:"application/json",
+                    dataType:'jsonp',
+                    success:function (json) {
+                        console.log(json);
+                        if (json.code) {
+                            alert("An error occured: " + json.message);
+                        } else {
+                            // extract access_token and finally make request to Nimble contacts API
+                            getContacts(json.access_token);
+                        }
+                    },
+                    error:function (e) {
+                        console.log(e);
+                    }
+                });
+            }
+            // setup click handlers
+            $("#authorize").click(function() {
+                var url = getOAuthRedirUrl($("#api_key").val());
+                console.log("Redirecting to: " + url);
+                window.location = url;
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+
+<h1>Nimble Contact REST api / Javascript example </h1>
+
+
+<div id="auth_block" style="display:none">
+<!-- Placeholder for API key/secret to get access_token -->
+    <table>
+
+        <tr>
+            <td> API key:</td>
+            <td><input type="text" id="api_key" value="8b3b4400f46c99fcbcf0ff09815efe10" style="width:450px;" readonly="readonly"/></td>
+        </tr>
+
+        <tr>
+            <td> Secret key:</td>
+            <Td><input type="text" id="secret_key" value="c3639f0230847a86" style="width:250px;" readonly="readonly"/></td>
+        </tr>
+
+    </table>
+
+    <button id="authorize">Authorize</button>
+</div>
+
+
+<div id="contacts">
+    <!-- A placeholder for contact list -->
+</div>
+
+
+</body>
+</html>

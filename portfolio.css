@@ -1,0 +1,156 @@
+ul.portfolio {
+    margin:0 40px;
+    padding:0;
+    overflow:hidden;
+    border:1px solid #1a1a1a;
+    border-width:1px 0 0 1px
+    }
+    
+ul.portfolio .item {
+    display:block;
+    float:left;
+    width:20%;
+    position:relative;
+    overflow:hidden
+    }
+    
+ul.portfolio .item p {
+    margin:0
+    }
+    
+ul.portfolio .item .description {
+    margin-top:110px;
+    -webkit-transition:all .2s ease-in-out;
+    -moz-transition:all .2s ease-in-out;
+    -o-transition:all .2s ease-in-out;
+    transition:all .2s ease-in-out;
+    text-align:center;
+    opacity:0;
+    color:#ccc
+    }
+    
+ul.portfolio .acquired {
+    background:#303030;
+    position:absolute;
+    bottom:1px;
+    left:1px;
+    padding:5px 14px
+    }
+    
+ul.portfolio .acquired p {
+    font-size:11px;
+    color:#ccc
+    }
+    
+ul.portfolio .inner {
+    border:1px solid #1a1a1a;
+    border-width:0 1px 1px 0;
+    padding:40px;
+    height:280px;
+    -webkit-transition:all .1s ease-in-out;
+    -moz-transition:all .1s ease-in-out;
+    -o-transition:all .1s ease-in-out;
+    transition:all .1s ease-in-out
+    }
+    
+ul.portfolio .inner:hover { 
+    background:#303030
+    }
+    
+ul.portfolio a {
+    cursor:pointer
+    }
+    
+ul.portfolio .portfoliologo {
+    background-repeat:no-repeat;
+    background-position:center;
+    width:60%;
+    height:70px;
+    background-size:contain;
+    margin:60px 20%;
+    -webkit-transition:all .2s ease-in-out;
+    -moz-transition:all .2s ease-in-out;
+    -o-transition:all .2s ease-in-out;
+    transition:all .2s ease-in-out
+    }
+    
+@media (min-width:1024px){
+    ul.portfolio .item:hover .inner {
+        background:#303030
+        }
+        
+        ul.portfolio .item:hover .description {
+            margin-top:20px;
+            opacity:1
+            }
+            
+        ul.portfolio .item:hover .portfoliologo {
+            margin:0 20%
+            }
+    }
+            
+            
+@media (max-width:1382px){
+    ul.portfolio .item {
+        width:25%
+        }
+    }
+        
+@media (max-width:1207px) {
+    ul.portfolio .item {
+        width:33.33333%
+        }
+    }
+        
+@media (max-width:1024px) {
+    ul.portfolio .inner {
+        padding:10px;
+        height:180px
+        }
+        
+    ul.portfolio .portfoliologo {
+        margin:40px 20%
+        }
+    }
+        
+@media (max-width:716px) {
+    ul.portfolio .item {
+        width:50%
+        }
+    }
+        
+@media (max-width:569px) {
+    ul.portfolio {
+        margin:0
+        }
+        
+    ul.portfolio .portfoliologo {
+        width:60%;
+        margin-left:20%;
+        margin-right:20%;
+        height:55px
+        }
+        
+    ul.portfolio .item {
+        width:50%
+        }
+        
+    ul.portfolio .inner {
+        padding:40px 0 0;
+        height:140px
+        }
+        
+    ul.portfolio .portfoliologo {
+        margin-top:0;
+        margin-bottom:0;
+        padding:20px 0
+        }
+        
+    ul.portfolio .acquired {
+        line-height:21px;
+        padding:0 8px
+        }
+}
+    
+    
+ 

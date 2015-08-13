@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="950px" height="851px" viewBox="0 0 950 851" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>Program Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="SteamFab" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="About" sketch:type="MSArtboardGroup" transform="translate(-106.000000, -1816.000000)">
+            <g id="Program-Copy" sketch:type="MSLayerGroup" transform="translate(107.000000, 1817.000000)">
+                <path d="M786.926743,698.336538 L475,472" id="Line" stroke="#193441" stroke-width="6" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+                <path d="M783.000001,234.269231 L471,466" id="Line" stroke="#193441" stroke-width="6" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+                <path d="M475,467 L164.913504,683.509615" id="Line" stroke="#193441" stroke-width="6" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+                <path d="M469.913504,154.125 L469.913504,472.999991" id="Line" stroke="#193441" stroke-width="6" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+                <path d="M164.913504,218.701923 L469,464.999994" id="Line" stroke="#193441" stroke-width="6" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+                <g id="Program---Accommodation" transform="translate(633.000000, 78.288462)">
+                    <ellipse id="Oval-6" stroke="#979797" stroke-width="3" fill="#90959B" sketch:type="MSShapeGroup" cx="139.764342" cy="139.75" rx="139.764342" ry="139.75"></ellipse>
+                    <text id="We-help-you-with-log" sketch:type="MSTextLayer" font-family="Exo 2.0" font-size="16" font-weight="420" sketch:alignment="middle" fill="#FFFFFF">
+                        <tspan x="77.1723425" y="124.326923">We help you with </tspan>
+                        <tspan x="60.1483425" y="143.326923">logistics including co-</tspan>
+                        <tspan x="52.4203425" y="162.326923">working space, housing, </tspan>
+                        <tspan x="69.5723425" y="181.326923">and other logistical </tspan>
+                        <tspan x="50.3403425" y="200.326923">questions you may have.</tspan>
+                    </text>
+                    <text id="Accommodation" sketch:type="MSTextLayer" font-family="Exo 2.0" font-size="24" font-weight="420" sketch:alignment="middle" fill="#FFFFFF">
+                        <tspan x="50.9283425" y="81.8846154">Accommodation</tspan>
+                    </text>
+                </g>
+                <g id="Program---Team" transform="translate(329.000000, 0.673077)">
+                    <ellipse id="Oval-6" stroke="#979797" stroke-width="3" fill="#CFC291" sketch:type="MSShapeGroup" cx="139.764342" cy="139.75" rx="139.764342" ry="139.75"></ellipse>
+                    <text id="We-know-how-to-build" sketch:type="MSTextLayer" font-family="Exo 2.0" font-size="16" font-weight="420" sketch:alignment="middle" fill="#FFFFFF">
+                        <tspan x="53.5323425" y="123.826923">We know how to build a </tspan>
+                        <tspan x="38.8683425" y="142.826923">team to run U.S. operations.</tspan>
+                        <tspan x="139.764342" y="161.826923"></tspan>
+                        <tspan x="70.8283425" y="180.826923">We help with agile, </tspan>
+                        <tspan x="65.9883425" y="199.826923">outsourcing, remote </tspan>
+                        <tspan x="44.0123425" y="218.826923">collaboration, and culture.</tspan>
+                    </text>
+                    <text id="Team" sketch:type="MSTextLayer" font-family="Exo 2.0" font-size="24" font-weight="420" sketch:alignment="middle" fill="#FFFFFF">
+                        <tspan x="110.508342" y="81.8846154">Team</tspan>
+                    </text>
+                </g>
+                <g id="Program---Incorporation" transform="translate(25.000000, 78.288462)">
+                    <ellipse id="Oval-6" stroke="#979797" stroke-width="3" fill="#D1DBBD" sketch:type="MSShapeGroup" cx="139.764342" cy="139.75" rx="139.764342" ry="139.75"></ellipse>
+                    <text id="We-help-you-incorpor" sketch:type="MSTextLayer" font-family="Exo 2.0" font-size="16" font-weight="420" sketch:alignment="middle" fill="#000000">
+                        <tspan x="50.7803425" y="120.807692">We help you incorporate </tspan>
+                        <tspan x="67.3803425" y="139.807692">a U.S. corporation, a </tspan>
+                        <tspan x="60.8043425" y="158.807692">requirement for a U.S. </tspan>
+                        <tspan x="71.6603425" y="177.807692">round of financing.</tspan>
+                    </text>
+                    <text id="Incorporation" sketch:type="MSTextLayer" font-family="Exo 2.0" font-size="24" font-weight="420" sketch:alignment="middle" fill="#000000">
+                        <tspan x="65.2203425" y="75.0576923">Incorporation</tspan>
+                    </text>
+                </g>
+                <g id="Program---Product" transform="translate(305.000000, 303.000000)">
+                    <ellipse id="Oval-6" stroke="#979797" stroke-width="3" fill="#193441" sketch:type="MSShapeGroup" cx="163.747573" cy="163.844828" rx="163.747573" ry="163.844828"></ellipse>
+                    <text id="Product---market-fit" sketch:type="MSTextLayer" font-family="Exo 2.0" font-size="16" font-weight="420" sketch:alignment="middle" fill="#FFFFFF">
+                        <tspan x="42.3155728" y="121.503979">Product - market fit is an ongoing </tspan>
+                        <tspan x="45.1875728" y="140.503979">struggle, anchored in the culture </tspan>
+                        <tspan x="95.5875728" y="159.503979">of an organization.</tspan>
+                        <tspan x="163.747573" y="178.503979"></tspan>
+                        <tspan x="67.5955728" y="197.503979">We help you optimize your </tspan>
+                        <tspan x="42.2835728" y="216.503979">product, measure results, iterate, </tspan>
+                        <tspan x="40.8115728" y="235.503979">prototype, and communicate with </tspan>
+                        <tspan x="141.619573" y="254.503979">users.</tspan>
+                    </text>
+                    <text id="Product" sketch:type="MSTextLayer" font-family="Exo 2.0" font-size="24" font-weight="420" sketch:alignment="middle" fill="#FFFFFF">
+                        <tspan x="120.763573" y="76.9801061">Product</tspan>
+                    </text>
+                </g>
+                <g id="Program---Curriculum" transform="translate(619.926743, 519.923077)">
+                    <ellipse id="Oval-6" stroke="#979797" stroke-width="3" fill="#91AA9D" sketch:type="MSShapeGroup" cx="163.747573" cy="163.844828" rx="163.747573" ry="163.844828"></ellipse>
+                    <text id="Scaling-a-business-c" sketch:type="MSTextLayer" font-family="Exo 2.0" font-size="16" font-weight="420" sketch:alignment="middle" fill="#FFFFFF">
+                        <tspan x="39.9315728" y="121.503979">Scaling a business can be learned. </tspan>
+                        <tspan x="45.2755728" y="140.503979">We offer a curriculum to prepare </tspan>
+                        <tspan x="69.1635728" y="159.503979">you for the things that are </tspan>
+                        <tspan x="94.3475728" y="178.503979">different in the U.S.</tspan>
+                        <tspan x="163.747573" y="197.503979"></tspan>
+                        <tspan x="42.9795728" y="216.503979">We show you how to organize for </tspan>
+                        <tspan x="133.051573" y="235.503979">success.</tspan>
+                    </text>
+                    <text id="Curriculum" sketch:type="MSTextLayer" font-family="Exo 2.0" font-size="24" font-weight="420" sketch:alignment="middle" fill="#FFFFFF">
+                        <tspan x="103.531573" y="76.9801061">Curriculum</tspan>
+                    </text>
+                </g>
+                <g id="Program---Customers" transform="translate(0.500000, 519.923077)">
+                    <ellipse id="Oval-6" stroke="#979797" stroke-width="3" fill="#FF712C" sketch:type="MSShapeGroup" cx="163.772727" cy="163.844828" rx="163.747573" ry="163.844828"></ellipse>
+                    <text id="We-use-a-repeatable-" sketch:type="MSTextLayer" font-family="Exo 2.0" font-size="16" font-weight="420" sketch:alignment="middle" fill="#FFFFFF">
+                        <tspan x="49.8367273" y="126.503979">We use a repeatable process to </tspan>
+                        <tspan x="42.1087273" y="145.503979">test for demand and we establish </tspan>
+                        <tspan x="63.7167273" y="164.503979">a reference architecture for </tspan>
+                        <tspan x="80.4687273" y="183.503979">marketing automation.</tspan>
+                        <tspan x="163.772727" y="202.503979"></tspan>
+                        <tspan x="55.2047273" y="221.503979">We like scalable and low-cost </tspan>
+                        <tspan x="64.5087273" y="240.503979">user acquisition, combining </tspan>
+                        <tspan x="53.5567273" y="259.503979">inbound marketing with inside </tspan>
+                        <tspan x="95.5887273" y="278.503979">consultative sales.</tspan>
+                    </text>
+                    <text id="Customers" sketch:type="MSTextLayer" font-family="Exo 2.0" font-size="24" font-weight="420" sketch:alignment="middle" fill="#FFFFFF">
+                        <tspan x="104.516727" y="81.9801061">Customers</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

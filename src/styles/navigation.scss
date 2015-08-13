@@ -41,7 +41,7 @@
   padding: 0 10px;
 
   @media (min-width: $screen-sm-min) {
-    background: $brand-seconday;
+    background: $brand-secondary;
   }
 }
 
@@ -51,7 +51,7 @@
   text-transform: uppercase;
 
   .active {
-    font-weight: 700;
+    font-weight: 600;
 
     a:hover {
       color: #fff;
@@ -70,7 +70,8 @@
 
   @media (min-width: $screen-sm-min) {
     > li > a {
-      padding: 16.5px 10px;
+//      padding: 16.5px 10px;
+              padding: 22px 10px;
   
       &:before {
         content: '';
@@ -86,6 +87,14 @@
       display: none;
     }
   }
+}
+
+.navbar-header {
+    padding-left: 50px;
+}
+
+.navbar-nav {
+    padding-right: 50px;
 }
 
 
