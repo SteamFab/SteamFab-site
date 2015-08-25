@@ -8,22 +8,22 @@
         </div>
       </div>
       <div class="form-container">
-        <form action="/api/contact-us" method="post" id="contact-form">
+        <form action="contact-form-sendgrid.php" method="post" id="contact-form">
           <div class="row">
             <div class="col-sm-6">
               <div class="row">
                 <div class="col-sm-12">
                   <label for="name">Name</label>
-                  <input type="text" name="name" required="required" class="form-control contact-form-name">
+                  <input type="text" name="name" id="name" required="required" class="form-control contact-form-name">
                 </div>
                 <div class="col-sm-12">
                   <label for="email">Email</label>
-                  <input type="email" name="email" required="required" class="form-control">
+                  <input type="email" name="email" id="email" required="required" class="form-control">
                 </div>
         
                 <div class="col-sm-12">
                   <label for="city">City/Country</label>
-                  <input type="city" name="location" required="required" class="form-control">
+                  <input type="text" name="location" id="location" required="required" class="form-control">
                 </div>
               </div>
             </div>
@@ -31,7 +31,7 @@
               <div class="row">
                 <div class="col-xs-12">
                   <label for="message">Message</label>
-                  <textarea name="message" rows="6" class="form-control" required="required"></textarea>
+                  <textarea name="message" rows="6" id="message"  class="form-control" required="required"></textarea>
                   <div class="centered-xs right-aligned-sm">
                     <button class="btn btn-primary btn-send ladda-button" data-style="expand-right" type="submit"><span class="ladda-label">Submit</span></button>
                   </div>
@@ -102,7 +102,40 @@
     </div>
   </div>
 </footer>
+<style>
+  .success .lead{
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #468847;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  }
+</style>
+<script type="text/javascript">
+  
+  function getParameterByName(name) {
+  name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+  var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+  results = regex.exec(location.search);
+  return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+  }
+  $(document).ready(function () {
 
+  var msg = getParameterByName('msg');
+  if (msg == "success") {
+  $(".success").removeClass("hide")
+  $("#name").focus();
+  return false;
+  }
+  else{
+  $(".success").addClass("hide")
+  $("#name").focus();
+  }
+
+  });
+</script>
 <script src="scripts/jquery.min.js"></script>
 <script src="scripts/bootstrap.min.js"></script>
 <script src="scripts/main.js"></script>
